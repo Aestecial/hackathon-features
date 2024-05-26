@@ -1,0 +1,2 @@
+FLASK_APP=hackaton.py
+SECRET_KEY=your-secret-key

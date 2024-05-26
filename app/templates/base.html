@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}ХАКАТОН{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sidebar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {%block stylesheet %}{% endblock %}
+</head>
+<body>
+{% if not current_user.is_anonymous %}
+<aside class="sidebar">
+    <div class="profile">
+        <img src="{{ url_for('static', filename='images/user.webp') }}" alt="Profile Picture">
+        <p>{{ current_user.username }}</p>
+        <a href="{{ url_for('logout') }}">Выйти</a>
+    </div>
+    <div class="notifications">
+        <p>Приветствую, {{ current_user.username }}!</p>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('index') }}" class="{% if request.path == '/index' %}active{% endif %}">Главная</a>
+            </li>
+            <li><a href="{{ url_for('resources') }}" class="{% if request.path == '/resources' %}active{% endif %}">Библиотека
+                ресурсов</a></li>
+            <li><a href="{{ url_for('support') }}" class="{% if request.path == '/support' %}active{% endif %}">Полезные
+                ссылки</a></li>
+            <li><a href="{{ url_for('skills') }}" class="{% if request.path == '/skills' %}active{% endif %}">Карта
+                навыков</a></li>
+            <li><a href="{{ url_for('network') }}" class="{% if request.path == '/network' %}active{% endif %}">Контакты
+                профессионалов</a></li>
+            <li><a href="{{ url_for('webinars') }}" class="{% if request.path == '/webinars' %}active{% endif %}">Конференции
+                Команды</a></li>
+        </ul>
+    </nav>
+    <div class="branding">
+        <img src="{{ url_for('static', filename='images/logo.webp') }}" alt="Logo">
+        <p>HACKATON</p>
+    </div>
+</aside>
+{% endif %}
+<main>
+    {% block content %}{% endblock %}
+</main>
+</body>
+</html>

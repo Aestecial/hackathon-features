@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Конференции Команды{% endblock %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/webinars.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="webinar-container">
+    <div class="webinar-card">
+        <h1>NO NAME TEAM</h1>
+        <div class="webinar-message">
+            <h2>Сообщение</h2>
+            <p>Здравствуйте, NO NAME TEAM. У вас сегодня 26.05 назначена встреча с профессионалами.</p>
+            <p>Если вдруг у вас поменялись планы или вы не сможете присутствовать по какой-то причине, то напишите это
+                организатору.</p>
+            <a href="https://telegram.org">Ссылка на организатора</a>
+        </div>
+        <div class="webinar-info">
+            <p>
+                <strong>КЕЙС:</strong> РАЗРАБОТКА ПО<br>
+                <strong>ВРЕМЯ:</strong> 18:30
+            </p>
+        </div>
+        <div class="webinar-link">
+            <p><strong>Ссылка на конференкцию:</strong> <a href="https://meet.google.com/">ПЕРЕЙТИ</a></p>
+        </div>
+    </div>
+    <div class="webinar-card">
+        <h1>NO NAME TEAM</h1>
+        <div class="webinar-message">
+            <h2>Сообщение</h2>
+            <p>Здравствуйте, NO NAME TEAM. У вас сегодня 25.05 назначена встреча с профессионалами.</p>
+            <p>Если вдруг у вас поменялись планы или вы не сможете присутствовать по какой-то причине, то напишите это
+                организатору.</p>
+            <a href="https://telegram.org">Ссылка на организатора</a>
+        </div>
+        <div class="webinar-info">
+            <p>
+                <strong>КЕЙС:</strong> РАЗРАБОТКА ПО<br>
+                <strong>ВРЕМЯ:</strong> 16:20
+            </p>
+        </div>
+        <div class="webinar-link">
+            <p><strong>Ссылка на конференкцию:</strong> <a href="https://meet.google.com/">ПЕРЕЙТИ</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}

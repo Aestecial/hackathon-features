@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Контакты профессионалов{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/resources.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="main-content">
+    <section class="card event-info">
+        <div class="contact">
+            <h3>Python Программист</h3>
+            <p><strong>Имя:</strong> Иван Иванов</p>
+            <p><strong>Почта:</strong> ivan.ivanov@example.com</p>
+            <p><strong>Телеграмм:</strong> <a href="https://telegram.org" target="_blank">Подробнее</a></p>
+            <p><strong>Вконтакте:</strong> <a href="https://vk.com" target="_blank">Подробнее</a></p>
+        </div>
+    </section>
+    <section class="card event-info">
+        <div class="contact">
+            <h3>Java Программист</h3>
+            <p><strong>Имя:</strong> Мария Петрова</p>
+            <p><strong>Почта:</strong> maria.petrova@example.com</p>
+            <p><strong>Телеграмм:</strong> <a href="https://telegram.org" target="_blank">Подробнее</a></p>
+            <p><strong>Вконтакте:</strong> <a href="https://vk.com" target="_blank">Подробнее</a></p>
+        </div>
+    </section>
+    <section class="card event-info">
+        <div class="contact">
+            <h3>Ruby Программист</h3>
+            <p><strong>Имя:</strong> Александр Сидоров</p>
+            <p><strong>Почта:</strong> alex.sidorov@example.com</p>
+            <p><strong>Телеграмм:</strong> <a href="https://telegram.org" target="_blank">Подробнее</a></p>
+            <p><strong>Вконтакте:</strong> <a href="https://vk.com" target="_blank">Подробнее</a></p>
+        </div>
+    </section>
+    <section class="card event-info">
+        <h3>Дизайнер</h3>
+        <p><strong>Имя:</strong> Ольга Смирнова</p>
+        <p><strong>Почта:</strong> olga.smirnova@example.com</p>
+        <p><strong>Телеграмм:</strong> <a href="https://telegram.org" target="_blank">Подробнее</a></p>
+        <p><strong>Вконтакте:</strong> <a href="https://vk.com" target="_blank">Подробнее</a></p>
+    </section>
+</div>
+{% endblock %}

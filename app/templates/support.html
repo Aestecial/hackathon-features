@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Полезные ссылки{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/resources.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="main-content">
+    <section class="card event-info">
+        <div class="contact">
+            <h3>Введение в DevOps</h3>
+            <p><strong>Название:</strong> DevOps Tutorial for Beginners | Learn DevOps in 7 Hours - Full Course</p>
+            <p><strong>Описание:</strong> Полный курс по DevOps, включающий такие темы, как CI/CD, контейнеризация с
+                использованием Docker, оркестрация с Kubernetes и многое другое. Этот курс поможет вам понять, как
+                эффективно интегрировать DevOps в ваш проект.</p>
+            <p><strong>Ссылка:</strong> <a href="https://www.youtube.com/watch?v=hQcFE0RD0cQ" target="_blank">перейти по
+                ссылке</a></p>
+        </div>
+    </section>
+    <section class="card event-info">
+        <div class="contact">
+            <h3>Продвинутая разработка на JavaScript</h3>
+            <p><strong>Название:</strong> JavaScript: Understanding the Weird Parts | The First 3.5 Hours</p>
+            <p><strong>Описание:</strong> Погрузитесь в продвинутые концепции JavaScript, такие как замыкания, контексты
+                вызова и прототипное наследование. Этот курс поможет вам понять сложные аспекты JavaScript.</p>
+            <p><strong>Ссылка:</strong> <a href="https://www.youtube.com/watch?v=Bv_5Zv5c-Ts" target="_blank">перейти по
+                ссылке</a></p>
+        </div>
+    </section>
+    <section class="card event-info">
+        <div class="contact">
+            <h3>Управление проектами и командами</h3>
+            <p><strong>Название:</strong> Agile Project Management | Full Course</p>
+            <p><strong>Описание:</strong> Узнайте, как эффективно управлять проектами с помощью Agile методологий. Видео
+                охватывает Scrum, Kanban и другие техники управления проектами, которые могут улучшить вашу работу на
+                хакатонах.</p>
+            <p><strong>Ссылка:</strong> <a href="https://www.youtube.com/watch?v=Z9QbYZh1YXY" target="_blank">перейти по
+                ссылке</a></p>
+        </div>
+    </section>
+    <section class="card event-info">
+        <div class="contact">
+            <h3>Введение в блокчейн</h3>
+            <p><strong>Название:</strong> Blockchain Full Course 4 hours | Blockchain Technology Explained</p>
+            <p><strong>Описание:</strong> Понимание блокчейн-технологий становится всё более важным. Этот курс объясняет
+                основы блокчейна, его применение и как начать работать с блокчейном в своих проектах.</p>
+            <p><strong>Ссылка:</strong> <a href="https://www.youtube.com/watch?v=SyVMma1IkXM" target="_blank">перейти по
+                ссылке</a></p>
+        </div>
+    </section>
+</div>
+{% endblock %}

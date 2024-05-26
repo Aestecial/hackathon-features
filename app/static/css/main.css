@@ -1,0 +1,69 @@
+main {
+    margin-left: 260px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f4f7fa;
+    border-radius: 8px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+    border: none;
+    overflow: hidden;
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.card p {
+    margin: 0;
+    color: #555;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.branding {
+    margin-top: auto;
+    text-align: center;
+    width: 100%;  /* Ensure the branding div takes the full width */
+}
+
+.branding img {
+    width: 100%;  /* Ensure the image takes the full width of the parent element */
+    height: auto;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+p.green {
+    color: green;
+}
+
+p.red {
+    color: red;
+}
+
+

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Карта навыков{% endblock %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/skills.css') }}">
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/skills.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="skills-container">
+    <h1>Твоя команда: No NAME TEAM</h1>
+    <div class="card-container">
+        {% for member in team_members %}
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/team/no_name/' + member.image) }}" alt="Profile Picture" class="profile-img">
+            <h2>{{ member.username }}</h2>
+            <p><strong>Знает языки:</strong> {{ member.skills }}</p>
+            <p><strong>Скиллы:</strong> {{ member.libraries }}</p>
+            <p><strong>Роль в команде:</strong> {{ member.role }}</p>
+            <p class="participant-number">Участник #{{ member.number }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

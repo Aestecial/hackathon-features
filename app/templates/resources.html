@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Библиотека ресурсов{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/resources.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="main-content">
+    {% for lang, v in data.items() %}
+    <section class="card">
+        <h1>{{lang}}</h1>
+        {% for framework, l in v.items() %}
+        <p><b>{{ framework }}:</b></p>
+        <p>{{ l[0] }}</p>
+        <p><a href="{{ l[1] }}">Обзоры</a>, <a href="{{ l[2] }}">Документация</a>, <a href="{{ l[3] }}">Примеры</a></p>
+        <br>
+        {% endfor %}
+    </section>
+    {% endfor %}
+</div>
+{% endblock %}
